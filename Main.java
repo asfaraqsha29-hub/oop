@@ -1,26 +1,30 @@
-class Student{
-	//private variable
-	private String name;
+interface Animal{
+	//declare an abstract method called sound
+	void sound();
 	
-	//setter method
-	public void set_name(String name){
-		this.name=name;
+	//declare another abstract method called eat
+	void eat();
+}
+
+//create a clas called dog
+class Dog implements Animal{
+	
+	//provide the implementation of the sound() method
+	public void sound(){
+		System.out.println("Dog barks");
 	}
-	public String getName(){
-		return name;
+	//provide the implimentation of the eat() method
+	public void eat(){
+		System.out.println("Dogs eat bones");
 	}
 }
-	public class Main{
-		public static void main(String args[]){
-			
-			//create student object
-			Student S1= new Student();
-			//S1.name="Aqsha";
-			S1.set_name("Aqsha");
-			
-			//get name using setter
-			System.out.println("Student Name :"+S1.getName());
-		}
-}	
+
+public class Main{
+	public static void main(String args[]){
+		Dog d=new Dog();
+		d.sound();
+		d.eat();
+	}
+}
 	
-	
+
