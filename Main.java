@@ -1,30 +1,33 @@
-interface Animal{
-	//declare an abstract method called sound
-	void sound();
-	
-	//declare another abstract method called eat
-	void eat();
-}
-
-//create a clas called dog
-class Dog implements Animal{
-	
-	//provide the implementation of the sound() method
-	public void sound(){
-		System.out.println("Dog barks");
-	}
-	//provide the implimentation of the eat() method
-	public void eat(){
-		System.out.println("Dogs eat bones");
-	}
-}
-
+//compile time polymorphism
 public class Main{
-	public static void main(String args[]){
-		Dog d=new Dog();
-		d.sound();
-		d.eat();
+	//method to add 2 integers
+	public int addition(int x,int y){
+		return x+y;
 	}
-}
-	
 
+
+// method to add three integers
+public int addition(int x,int y,int z){
+		return x+y+z;
+	}
+	
+//method to add two doubles
+public double addition(double x,double y){
+		return x+y;
+	}
+public static void main(String args[]){
+	Main number=new Main();
+	int res1=number.addition(5,6);
+	System.out.println("Addition of two numbers :"+res1);
+	System.out.println();
+	
+	int res2=number.addition(5,6,7);
+	System.out.println("Addition of three numbers :"+res2);
+	System.out.println();
+	
+	double res3=number.addition(5.5,6.5);
+	System.out.println("Addition of three numbers :"+res3);
+	System.out.println();
+	
+}
+}
