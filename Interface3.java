@@ -1,28 +1,30 @@
-interface Father{
-	void work();
+interface Payment{
+	void pay();
 }
-
-interface Mother{
-	void cook();
-}
-
-class Child implements Father,Mother{
-	public void work(){
-		System.out.println("child Works");
-	}
-	
-	public void cook(){
-		System.out.println("child cooks");
+class CardPayment implements Payment{
+	public void pay(){
+		System.out.println("you can pay with using card");
 	}
 }
-
+class CashPayment implements Payment{
+	public void pay(){
+		System.out.println("you can pay with cash");
+	}
+}
+class OnlinePayment implements Payment{
+	public void pay(){
+		System.out.println("you can pay with online payment");
+	}
+}
 public class Interface3{
 	public static void main(String args[]){
+		CardPayment Card=new CardPayment();
+		Card.pay();
 		
-		Child ch=new Child();
-		ch.work();
+		CashPayment cash=new CashPayment();
+		cash.pay();
 		
-		ch.cook();
+		OnlinePayment online=new OnlinePayment();
+		online.pay();
 	}
 }
-	

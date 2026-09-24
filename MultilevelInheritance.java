@@ -8,12 +8,17 @@ class Mammal extends Animal{
 		System.out.println("Mammals Walks");
     }
 }
-
+class Dog extends Mammal{
+	void bark(){
+		System.out.println("Dog barks");
+	}
+}
 public class MultilevelInheritance{
 	public static void main(String args[]){
-		Mammal m=new Mammal();
+		Dog d=new Dog();
 		
-		m.eat();
-		m.walk();
+		d.eat();
+		d.walk();
+		d.bark();
 	}
 }
